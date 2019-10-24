@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="main.js"></script>
+    
+ <style>
+        h5{font-size:18px; text-align: left;}
+     img.ex{
+         position: relative;
+         right:90px;
+     }
+</style>
+
+</head>
+<body>
+    <script>
+        function errorPage(){
+            alert("아직 대여소번호를 입력을 안하셨습니다.");
+        }
+    </script>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="/" style="font-size:30px;">공자</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li ><a href="/" accesskey="1" title="">Homepage</a></li>
+				<li><a href="/intro" accesskey="2" title="">공자소개</a></li>
+				<li><a id="ex1" href="/" accesskey="3" title="" onclick="errorPage()">대여소조회</a></li>
+				<li class="current_page_item"><a href="/info" accesskey="4" title="">현재 자전거 수</a></li>
+				<li><a href="/moveBicycle" accesskey="5" title="">자전거 재배치</a></li>
+			</ul>
+		</div>
+	</div>
+    
+	  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div><img src="images/banner.jpg" style="width:100%; height: 350px;"></div>
+</div>
+
+<div class="mySlides fade">
+  <div><img src="https://www.bikeseoul.com/images/kr/bg/main_img.jpg" style="width:100%; height:350px;"></div>
+</div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+    
+
+    
+    
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+    
+		<ul class="actions">
+            
+            <li><a href="#" class="button">현재 자전거 대수</a></li>
+		</ul>
+	</div>
+	<div id="extra" class="container">
+		<div class="title">
+		<div id="three-column">
+			<div class="boxA" style="height: auto;"><img class="ex" src="images/bicycle-parking.png" alt ="calender" width="70px" height="70px" >
+				<script>
+                    var result = <%- JSON.stringify(results123) %>;
+
+                    document.write("<h5>106. 현재대수: "+result[0]);
+                    document.write("<br>");
+                    document.write("116. 현재대수: "+result[1]);
+                    document.write("<br>");
+                    document.write("118. 현재대수: "+result[2]);
+                    document.write("<br>");
+                    document.write("124. 현재대수: "+result[3]);
+                    document.write("<br>");
+                    document.write("128. 현재대수: "+result[4]);
+                    document.write("<br>");
+                    document.write("144. 현재대수: "+result[5]);
+                    document.write("<br>");
+                    document.write("162. 현재대수: "+result[6]);
+                    document.write("<br>");
+                    document.write("210. 현재대수: "+result[7]);
+                    document.write("<br>");
+                    document.write("212. 현재대수: "+result[8]);
+                    document.write("<br>");
+                    document.write("216. 현재대수: "+result[9]);
+                    document.write("<br></h5>");
+                </script>
+			</div>
+			<div class="boxB"><img class="ex" src="images/bicycle-parking.png" alt ="calender" width="70px" height="70px" >
+                <script>
+                    var result = <%- JSON.stringify(results123) %>;
+
+                    document.write("<h5>221. 현재대수: "+result[10]);
+                    document.write("<br>");
+                    document.write("222. 현재대수: "+result[11]);
+                    document.write("<br>");
+                    document.write("247. 현재대수: "+result[12]);
+                    document.write("<br>");
+                    document.write("258. 현재대수: "+result[13]);
+                    document.write("<br>");
+                    document.write("302. 현재대수: "+result[14]);
+                    document.write("<br>");
+                    document.write("316. 현재대수: "+result[15]);
+                    document.write("<br>");
+                    document.write("326. 현재대수: "+result[16]);
+                    document.write("<br>");
+                    document.write("329. 현재대수: "+result[17]);
+                    document.write("<br>");
+                    document.write("336. 현재대수: "+result[18]);
+                    document.write("<br>");
+                    document.write("340. 현재대수: "+result[19]);
+                    document.write("<br></h5>");
+                </script>
+       
+					
+				</div>
+			</div>
+			<div class="boxC"><img class="ex" src="images/bicycle-parking.png" alt ="calender" width="70px" height="70px" >
+                <script>
+                    var result = <%- JSON.stringify(results123) %>;
+
+                    document.write("<h5>341. 현재대수: "+result[20]);
+                    document.write("<br>");
+                    document.write("342. 현재대수: "+result[21]);
+                    document.write("<br>");
+                    document.write("346. 현재대수: "+result[22]);
+                    document.write("<br>");
+                    document.write("385. 현재대수: "+result[23]);
+                    document.write("<br>");
+                    document.write("501. 현재대수: "+result[24]);
+                    document.write("<br>");
+                    document.write("529. 현재대수: "+result[25]);
+                    document.write("<br>");
+                    document.write("540. 현재대수: "+result[26]);
+                    document.write("<br>");
+                    document.write("568. 현재대수: "+result[27]);
+                    document.write("<br>");
+                    document.write("639. 현재대수: "+result[28]);
+                    document.write("<br>");
+                    document.write("907. 현재대수: "+result[29]);
+                    document.write("<br></h5>");
+                </script>
+				
+			</div>
+		</div>
+	</div>
+
+    <div id="copyright" class="container">
+        <p>&copy; Model by <strong>Lee Jea Hyeong</strong>|  interlock by <strong>Park Sun Woo</strong>| WebPage by <strong>Mo Hyeon Min </strong></p>
+    </div>
+    
+</body>
+    
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head><title>Result 페이지</title></head>
+
+
+<body>
+    <form>
+    <center>
+<script>
+    var result = <%- JSON.stringify(results123) %>;
+    
+    var len = result.length;
+    for(var i=0; i< result.length; i++)
+        {
+            document.write(result[i]);
+            document.write("<br>");
+        }
+
+    </script>
+    </form>
+    
+    <input type = "button" onclick = "location.href = 'http://localhost:5000/test'" value = "뒤로가기">
+    
+    <input type = "button" onclick = "location.href = 'http://localhost:5000'" value = "처음으로">
+    </center>
+</body>
+</html>

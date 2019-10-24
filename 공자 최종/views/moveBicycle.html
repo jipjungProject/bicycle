@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="main.js"></script>
+    
+     <style>
+        
+         img.ex1{
+             position: relative;
+             right:60px;
+         }
+         img.ex2{
+             position:relative;
+             
+             
+         }
+         img.ex3{
+             position:relative;
+             left:60px;
+         }
+    </style>
+</head>
+<body>
+    <script>
+        function errorPage(){
+            alert("아직 대여소번호를 입력을 안하셨습니다.");
+        }
+    </script>
+    <div id="wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="/" style="font-size:30px;">공자</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li ><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="/intro" accesskey="2" title="">공자소개</a></li>
+                    <li><a id="ex1" href="/" accesskey="3" title="" onclick="errorPage()">대여소조회</a></li>
+                    <li><a href="/info" accesskey="4" title="">현재 자전거 수</a></li>
+                    <li class="current_page_item"><a href="/moveBicycle" accesskey="5" title="">자전거 재배치</a></li>
+                </ul>
+            </div>
+        </div>
+
+          <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div><img src="images/banner.jpg" style="width:100%; height: 350px;"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div><img src="https://www.bikeseoul.com/images/kr/bg/main_img.jpg" style="width:100%; height:350px;"></div>
+    </div>
+
+    </div>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span>
+    </div>
+    
+
+    
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+    <ul class="actions">
+        <li><a href="#" class="button">자전거 재배치</a></li>
+	</ul>
+	</div>
+	<div id="extra" class="container">
+		<div class="title">
+		<div id="three-column">
+			<form style="font-size: 20px; word-spacing: 1em; font-weight: 300; color: darkred;">
+                <div  style="height: auto;">
+                    <img class="ex1" src="images/bicycle-parking.png" alt ="calender" width="70px" height="70px" >
+                    
+                    <img class="ex2" src="images/bicycle-parking.png" alt ="calender" width="70px" height="70px" >
+                    <img class="ex3" src="images/bicycle.png" alt ="calender" width="70px" height="70px" >
+                
+                
+
+                    <br><br>
+                    <script>
+                        var result = <%- JSON.stringify(results123) %>;
+
+                        var len = result.length;
+                        for(var i=0; i< result.length; i++)
+                            {
+                                document.write(result[i]);
+                                document.write("<br>");
+                            }
+
+
+                    </script>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div id="copyright" class="container">
+        <p>&copy; Model by <strong>Lee Jea Hyeong</strong>|  interlock by <strong>Park Sun Woo</strong>| WebPage by <strong>Mo Hyeon Min </strong></p>
+    </div>
+    
+</body>
+    
+</html>

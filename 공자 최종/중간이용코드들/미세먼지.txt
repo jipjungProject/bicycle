@@ -1,0 +1,10 @@
+API 문서 18페이지
+
+3번 서비스  getCtprvnRltmMesureDnsty
+시도별 실시간 측정정보 조회
+버전 1.0: pm2.5 데이터 포함된 결과
+
+페이지당 10개. numOfRows
+page1개
+요청
+http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?sidoName=서울&pageNo=1&numOfRows=1&ServiceKey=CTWCOpgDhkr%2BzPRo7Zux1A7H5v3EeDWZnLHbqFgyxQkNkaJ4uP7x1DhB0HJG4b3On9IyoMSOB1vC867DPlp1hQ%3D%3D&ver=1.0

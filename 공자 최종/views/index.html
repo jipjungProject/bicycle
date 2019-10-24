@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="main.js"></script>
+        
+<script type = "text/javascript">
+    
+    function movepage_2(){
+        location.href="/send";
+    }
+    function movepage_3(){
+        location.href = "/info";
+    }
+  
+</script>
+
+
+</head>
+<body>
+    <script>
+        function errorPage(){
+            alert("아직 대여소번호를 입력을 안하셨습니다.");
+        }
+    </script>
+    <div id="wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="/" style="font-size: 30px;">공자</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="/intro" accesskey="2" title="">공자소개</a></li>
+                    <li><a id="ex1" href="/" accesskey="3" title="" onclick="errorPage()">대여소조회</a></li>
+                    <li><a href="/info" accesskey="4" title="">현재 자전거 수</a></li>
+                    <li><a href="/moveBicycle" accesskey="5" title="">자전거 재배치</a></li>
+                </ul>
+            </div>
+        </div>
+
+          <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div><img src="images/banner.jpg" style="width:100%; height: 350px;"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div><img src="https://www.bikeseoul.com/images/kr/bg/main_img.jpg" style="width:100%; height:350px;"></div>
+    </div>
+
+    </div>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span>
+    </div>
+    
+
+    
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+    <ul class="actions">
+        <li><a href="#" class="button">정보</a></li>
+	</ul>
+	</div>
+	<div id="extra" class="container">
+		<div class="title">
+		<div id="three-column">
+			<div class="boxA">
+				<div class="box" style="width: 270px; height: 210px;"> <div id="weather_icon" ><section id="icon" ></section></div>
+					<form  class="search" id="search" role="search">
+						<div id="weather" style="font-size:20px; text-align: left">지역: <a id = "city"></a></div>
+                        <div id="weather" style="font-size: 20px; text-align: left">온도: <a id="temperature-celcius"></a></div> 
+                        <div id="weather" style="font-size: 20px; text-align: left">습도: <a id = 'humidity'></a></div>
+                        <div id="weather" style="font-size: 20px; text-align: left">전체: <a id= 'overall'></a></div>
+					   
+                        
+					</form>   
+				</div>
+			</div>
+			<div class="boxB">
+				<div class="box" style="width: 270px; height: 210px;"> <img src="images/bicycle.png" alt ="bicycle rental place" width="150px" hight="150px">
+					
+					
+                         <form action="/send" method = "post">
+                            <select name="number">
+                                <option>대여소번호</option>
+                                <option value="106">106. 합정역 7번출구 앞</option>
+                                <option value="116">116. 일진아이윌아파트 옆</option>
+                                <option value="118">118. 광흥창역 2번출구 앞</option>
+                                <option value="124">124. 서강대 정문 건너편</option>
+                                <option value="128">128. 신촌역(2호선) 1번출구 옆</option>
+
+                                <option value="144">144. 공덕역 8번출구</option>
+                                <option value="162">162. 봉원고가차도 밑</option>
+                                <option value="210">210. IFC몰</option>
+                                <option value="212">212. 여의도역 1번출구 옆</option>
+                                <option value="216">216. 삼부아파트1동 앞</option>
+
+                                <option value="221">221. 여의도초교 앞</option>
+                                <option value="222">222. 시범아파트버스정류장 옆</option>
+                                <option value="247">247. 당산역 10번출구 앞</option>
+                                <option value="259">259. 대방역6번출구</option>
+                                <option value="302">302. 경복궁역 4번출구 뒤</option>
+
+                                <option value="316">316. 종각역 1번출구 앞</option>
+                                <option value="326">326. 안국역 5번출구 앞</option>
+                                <option value="329">329. 청계2가 사거리 옆</option>
+                                <option value="336">336. 티마크 호텔 앞</option>
+                                <option value="340">340. 혜화동 로터리</option>
+
+                                <option value="341">341. 혜화역 3번출구 뒤</option>
+                                <option value="342">342. 대학로 마로니에공원</option>
+                                <option value="346">346. 맥스타일 앞</option>
+                                <option value="385">385. 종각역 5번출구</option>
+                                <option value="501">501. 광진구의회 앞</option>
+
+                                <option value="529">529. 장한평역 8번 출구 앞</option>
+                                <option value="540">540. 군자역 7번출구 베스트샵 앞</option>
+                                <option value="568">568. 청계8가사거리 부근</option>
+                                <option value="639">639. 서울시립대 후문</option>
+                                <option value="907">907. CJ 드림시티</option>
+                            </select>
+                            <br>
+                            <input type = "submit" value="예측" style="width: 100px; hight:50px;"><br>
+                        </form>
+                        
+					
+                          
+                    
+					
+				</div>
+			</div>
+			<div class="boxC">
+				<div class="box" style="width: 270px; height: 210px;"> <img src="images/bicycle-parking.png" alt ="calender" width="150px" height="150px">
+                    <form  class="search" id="search" role="search">
+					<input type = "button" value="대여소정보" onclick="movepage_3()" style="width: 100px; hight:50px;"/>
+                    </form>  
+				</div>
+			</div>
+        </div>
+        </div>
+    </div>
+    <div id="copyright" class="container">
+        <p>&copy; Model by <strong>Lee Jea Hyeong</strong>|  interlock by <strong>Park Sun Woo</strong>| WebPage by <strong>Mo Hyeon Min </strong></p>
+    </div>
+    
+</body>
+    
+</html>

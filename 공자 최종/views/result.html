@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="main.js"></script>
+    <style>
+        h5{font-size:22px;}
+    </style>
+
+</head>
+<body>
+    <script>
+        function errorPage(){
+            alert("새로운 대여소 조회할려면 homepage버튼을 눌러주세요.");
+        }
+    </script>
+    
+    
+    <div id="wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="/" style="font-size:30px;">공자</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li ><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="/intro" accesskey="2" title="">공자소개</a></li>
+                    <li class="current_page_item"><a accesskey="3" title="" onclick="errorPage()">대여소조회</a></li>
+                    <li><a href="/info" accesskey="4" title="">현재 자전거 수</a></li>
+                    <li><a href="/moveBicycle" accesskey="5" title="">자전거 재배치</a></li>
+                </ul>
+            </div>
+        </div>
+
+          <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div><img src="images/banner.jpg" style="width:100%; height: 350px;"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div><img src="https://www.bikeseoul.com/images/kr/bg/main_img.jpg" style="width:100%; height:350px;"></div>
+    </div>
+
+    </div>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span>
+    </div>
+    
+
+    
+    
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+    
+		<ul class="actions">
+            
+            <li><a href="#" class="button">대여소정보</a></li>
+		</ul>
+	</div>
+	<div id="extra" class="container">
+		<div class="title">
+		<div id="three-column">
+			<div class="boxA">
+				<div class="box" style="width: 270px; height: 210px;"> <div id="weather_icon" ><section id="icon" ></section></div>
+					<form  class="search" id="search" role="search">
+						<div id="weather" style="font-size:20px; text-align: left">지역: <a id = "city"></a></div>
+                        <div id="weather" style="font-size: 20px; text-align: left">온도: <a id="temperature-celcius"></a></div> 
+                        <div id="weather" style="font-size: 20px; text-align: left">습도: <a id = 'humidity'></a></div>
+                        <div id="weather" style="font-size: 20px; text-align: left">전체: <a id= 'overall'></a></div>
+					   
+                        
+					</form>
+                    
+				</div>
+			</div>
+			<div class="boxB">
+                <form>
+                    <script>
+                        
+                        var result = <%- JSON.stringify(results123) %>;
+                        document.write("<center>")
+                        document.write("<br>");
+                        document.write("<br>");
+                        
+                        document.write("<h5>대여소 번호 :"+result[6])
+                        document.write("<br>");
+                        document.write("<br>");
+                        
+                        
+                        document.write("대여량: "+result[0]);
+                        document.write("<br>");
+                        document.write("<br>");
+                        
+                        document.write("반납량: " + result[1]);
+                        document.write("<br>");
+                        document.write("<br>");
+                        
+                        document.write("현재남은갯수: " + result[3]);
+                        document.write("<br>");
+                        
+                        document.write("</center>")
+
+
+
+                    </script>
+                    </form>
+				</div>
+			</div>
+            <script>
+                function changeImg(){
+                    var result = <%- JSON.stringify(results123) %>;
+                    var image =document.getElementById('ex1');
+                    
+                    if(result[5] == 0){
+                        image.src="images/bicycle.png";
+                        alert("적당합니다.");
+                    }
+                    else{
+                        if(result[4].match('lack') == 'lack'){
+                            image.src ="images/alarm.png";
+                            alert(result[5] + "대 부족합니다.");
+
+                        }
+                        else{
+                            image.src="images/bicycle(2).png";
+                            alert(result[5]+"대 남습니다.");
+
+                        }
+                    }
+                }
+                function movePage_1(){
+                    location.href="/moveBicycle";
+                }
+                 function movePage_2(){
+                    location.href="/info";
+                }
+            
+            
+                </script>
+			<div class="boxC">
+				<div class="box" style="width: 270px; height: 210px;"> <img id= "ex1"src="images/bicycle-parking.png" width="100px" height="100px" onclick="changeImg()">
+                <br><br>
+                <input type = "button" value="자전거 재배치" onclick="movePage_1()" style="width: 200px; hight:50px;"/>
+                <br><br>
+                <input type = "button" value="현재 자전거 대수" onclick="movePage_2()" style="width: 200px; hight:50px;"/>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright" class="container">
+        <p>&copy; Model by <strong>Lee Jea Hyeong</strong>|  interlock by <strong>Park Sun Woo</strong>| WebPage by <strong>Mo Hyeon Min </strong></p>
+    </div>
+    
+</body>
+    
+</html>

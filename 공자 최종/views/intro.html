@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Intro 페이지</title>
+    
+<style>
+    
+@media (min-width: 1024px)
+.main {
+    display: block;
+    padding-top: 100px;
+}
+
+ul {
+    list-style: none;
+}
+    
+html, body, div, span, iframe, h3, h4, h5, h6,  a, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+    
+h2{
+    font-size: 200%;
+}
+.main h1 {
+    border-top: 1px solid #72ebc9;
+    height: 202px;
+    width: 100%;
+    margin: 50px 0 50px 0;
+    text-align: center;
+}
+
+.main .rental_guide li {
+    border: 1px solid #72ebc9;
+    width: 20%;
+    border-radius: 10px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 5px;
+    font-size: 13px;
+    line-height: normal;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+} 
+
+.main .rental_guide li.guide_1 .img {
+    background: url(/images/kr/bg/1.jpg) no-repeat;
+    background-size: 100%;
+}
+.main .rental_guide li.guide_2 .img {
+    background: url(/images/kr/bg/2.jpg) no-repeat;
+    background-size: 100%;
+}
+.main .rental_guide li.guide_3 .img {
+    background: url(/images/kr/bg/3.jpg) no-repeat;
+    background-size: 100%;
+}
+.main .rental_guide li.guide_4 .img {
+    background: url(/images/kr/bg/4.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.main .rental_guide li .img {
+    width: 140%;  
+    height: 170px;
+}
+
+.main .rental_guide li.guide_1 p{
+    
+    color: #FFF
+        
+}
+.main .rental_guide li.guide_2 p{
+    
+    color: #FFF
+        
+}
+.main .rental_guide li.guide_3 p{
+    
+    color: #FFF
+        
+}
+.main .rental_guide li.guide_4 p{
+    
+    color: #FFF
+        
+}
+
+.main .rental_guide {
+    padding: 55px 15px;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    
+.main .rental_info {
+    padding: 0 0 50px 0;
+    background-color: #efefef;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+    
+.main .rental_info .info_box_1 {
+    padding: 15px;
+    position: relative;
+    width: 47%;
+    display: inline-block;
+    zoom: 1;
+}
+.main .rental_info .info_box_1 dl {
+    float: right;
+}
+    
+.main .rental_info .info_box_2 {
+    padding: 15px;
+    position: relative;
+    width: 47%;
+    display: inline-block;
+    zoom: 1;
+ }    
+ .main .rental_info .info_box_2 dl {
+    float: left;
+}
+.main .rental_info dl {
+    background-color: #fff;
+    padding: 20px 20px 40px 20px;
+    font-size: 14px;
+    width: 350px;
+    height: 200px;
+    text-align: left;
+    line-height: normal;
+}
+    
+
+.main .rental_info dd {
+    margin-bottom: 12px;
+    padding-left: 10px;
+}
+.main .rental_info dt {
+    font-size: 24px;
+    text-align: center;
+    color: #72ebc9;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+    
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+
+<body>
+<script>
+        function errorPage(){
+            alert("아직 대여소번호를 입력을 안하셨습니다.");
+        }
+    </script>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="/" style="font-size:30px;">공자</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/" accesskey="1" title="">Hompage</a></li>
+				<li class="current_page_item"><a href="/intro" accesskey="2" title="">공자소개</a></li>
+				<li><a id="ex1" href="/" accesskey="3" title="" onclick="errorPage()">대여소조회</a></li>
+				<li><a href="/info" accesskey="4" title="">현재 자전거 수</a></li>
+				<li><a href="/moveBicycle" accesskey="5" title="">자전거 재배치</a></li>
+			</ul>
+		</div>
+	</div>
+        <div id="banner">&nbsp;</div>
+	</div>
+    <div class = "main" id="bike_info">
+        <h1><img src= "images/ko/bikeseoul_web.png" alt = "자전거와 함께하는 건강한 도시, 세계적인 자전거 도시 서울"></h1>
+        
+        
+        
+        <div class = "rental_guide">
+        <h2>대여소 안내</h2>
+        <ul>
+            <li class = "guide_1">
+                <div class = "img"></div>
+                <p>대여소는<strong>지하철 출입구,<br>버스정류장, 주택단지, 관공서,<br>학교, 은행 등 생활내 통행장소</strong>를<br>중심으로 설치되어<br>운영중에 있습니다.</p>
+            </li>
+            
+            <li class = "guide_2">
+                <div class = "img"></div>
+                <p>서울자전거의 대여와 반납이<br>무인으로 이루어지는<br>정류장 형태의 공간을<br>대여소라고 합니다.</p>
+            </li>
+
+            <li class = "guide_3">
+                <div class = "img"></div>
+                <p>대여소는<strong>주변 생활시설에<br>접근 및 시민들의 이용이 편리한<br>장소를 중심으로 설치</strong>되어<br>운영중에 있습니다.</p>
+            </li>
+
+            <li class = "guide_4">
+                <div class = "img"></div>
+                <p>서울자전거 이용자는<br>장소에 구애받지 않고 <strong>대여소가 설치된 곳이면 어디에서나<br>자전거를 대여하고 <br>반납</strong>할 수 있습니다.</p>
+            </li>
+        </ul>        
+        </div>
+        
+        
+        <div class="rental_info">
+            <h2>대여소 구성요소</h2>
+            <div class = "info_box_1">
+                <dl>
+                <dt>서울자전거</dt>
+                <dd>여성, 노약자 누구나 편하게 이용할 수 있는 자전거로, 가볍고 내구성이 강한 소재를 사용하여 주행 안정성과 편의성을 최우선으로 제작하였습니다.</dd>
+                <dd class="left">서울자전거에서 이용하신 후 운행정보(주행거리, 시간), 운동량(소모 열량)을 나의공간&gt;이용내역에서 확인 할 수 있습니다.</dd>
+                </dl>
+            </div>
+            
+            <div class = "info_box_2">
+                <dl>
+                <dt>거치대</dt>
+                <dd>거치대는 자전거를 거치하기 위한 시설이며, 반납 시 자전거를 결속해 묶을 수 있는 자전거 잠금장치가 부착되어 있습니다.</dd>
+                <dd class="right">자전거 대여시에는 거치대와 연결되어 잇는 잠금장치를 자전거 단말기에서 분리한 후 이용하시면 됩니다.</dd>
+                </dl>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    
+    
+</body>
+</html>
